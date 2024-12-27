@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Allocation</title>
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+    <nav>
+        <img class="profil" src="../src/pak-pandu.jpg" alt="">
+        <div class="navigasi">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Firsfit.html">First Fit</a></li>
+                <li><a href="Nextfit.html">Next Fit</a></li>
+            </ul>
+        </div>
+        <Button class="nav-button">Contact US</Button>
+    </nav>
+    <div class="container">
+        <h1>Simulasi Alokasi Memory</h1>
+
+        <div class="input-section">
+            <h2>Masukkan Data</h2>
+            <label for="memory-blocks">Hole Memory(dipisahkan coma) dalam ukuran MB:</label>
+            <input type="text" id="memory-blocks" placeholder="contoh, 10, 50, 20, 100, 120">
+
+            <label for="process-sizes">Ukuran Prosess (dipisahkan coma) dalam ukuran MB:</label>
+            <input type="text" id="process-sizes" placeholder="contoh, 5, 25, 35, 70, 100">
+
+            <button id="simulate-btn">Simulasikan</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Hasil</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Process</th>
+                        <th>Size</th>
+                        <th>First Fit</th>
+                        <th>Next Fit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="../src/script.js"></script>
+    <footer> 
+        <h5>
+            &copy; Dibuat oleh kelompok 7 2024
+        </h5> 
+    </footer>
+</body>
+</html>

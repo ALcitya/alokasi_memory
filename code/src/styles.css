@@ -1,0 +1,198 @@
+/* untuk navbar */
+nav, footer{
+    margin-top:10px;
+    background-color:rgb(94, 95, 121);
+    width:75%;
+    justify-self:center;
+    border-radius:10px;
+}
+nav{
+    padding:0px 1rem;
+}
+nav, ul{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+ul{
+    width:fit-content;
+    gap: 10px;
+}
+li{
+    list-style:none;
+    color:white;
+}
+li a:hover{
+    color: rgb(0, 236, 253);
+}
+li a:active{
+    color: rgb(0, 59, 253);
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.profil{
+    width:40px;
+    border-radius: 50%;
+}
+.nav-button{
+    width:120px;
+    padding:10px;
+    border-radius:10px;
+
+}
+.nav-button:active{
+    background-color: rgb(3, 32, 128);
+}
+/* main */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-section, .output-section {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(16, 77, 220);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(16, 70, 194);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(16, 77, 220) ;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* footer */
+footer{
+    height:30px;
+    color:white;
+    justify-content:center;
+    align-items:center;
+}
+footer h5{
+    padding-top:8px;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.hero-section {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.algorithms-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.algorithm-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.algorithm-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.algorithm-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.card-button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
