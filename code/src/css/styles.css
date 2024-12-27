@@ -13,45 +13,28 @@ nav, footer{
     border-radius:10px;
 }
 nav{
-    padding:4px 1rem;
-}
-nav, ul{
+    padding:0.5rem 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items:center;
+    justify-content: center;
+    gap: 3rem;
 }
-
-ul{
-    width:fit-content;
-    gap: 10px;
-}
-li{
-    list-style:none;
-    color:white;
-}
-li a:hover{
-    color: rgb(0, 236, 253);
-}
-li a:active{
-    color: rgb(0, 59, 253);
-}
-li a{
+nav a{
+    height:30px;
     text-decoration: none;
-    color: white;
+    color:white;
+    color: #ffffff;
+    font-weight: bold;
 }
-.profil{
-    width:40px;
-    border-radius: 50%;
+nav a:hover{
+    scale:1.1;
+    text-decoration: underline;
+    color: #9381ff;
 }
-.nav-button{
-    width:120px;
-    padding:10px;
-    border-radius:10px;
+nav a:active{
+    scale:0.9;
+    color:rgb(8, 100, 219);
+}
 
-}
-.nav-button:active{
-    background-color: rgb(3, 32, 128);
-}
 /* main */
 body {
     font-family: Arial, sans-serif;
@@ -64,7 +47,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #ffffff;
+    background: #ffeedd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -73,7 +56,9 @@ h1, h2 {
     text-align: center;
     color: #333;
 }
-
+.input-section input{
+    background-color: #f8f7ff;
+}
 .input-section, .output-section {
     margin-top: 20px;
 }
@@ -95,7 +80,7 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color:rgb(16, 77, 220);
+    background-color:rgb(105, 80, 245);
     color: white;
     border: none;
     border-radius: 4px;
@@ -104,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(16, 70, 194);
+    background-color:rgb(83, 53, 251);
 }
 
 table {
@@ -121,7 +106,7 @@ th, td {
 }
 
 th {
-    background-color: rgb(16, 77, 220) ;
+    background-color: rgb(105, 80, 245) ;
     color: white;
 }
 
@@ -149,6 +134,9 @@ footer h5{
 .hero-section {
     padding: 3rem 0;
     margin-bottom: 2rem;
+    border:1px solid #000000;
+    background-color: #ffeedd;
+    border-radius: 10px;
 }
 
 .hero-section h1 {
@@ -176,7 +164,8 @@ footer h5{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 300px;
     text-align: center;
-    border:1px solid #000000
+    border:1px solid #000000;
+    background-color: #f8f7ff;
 }
 .algorithm-card:hover{
     box-shadow: 10px 14px 4px 2px rgba(0,0,0,0.1);
@@ -196,7 +185,7 @@ footer h5{
 
 .card-button {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
+    background-color: #9381ff;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -226,11 +215,12 @@ footer h5{
 .pros ul li, .cons ul li{
     text-align: left;
     color: #000000;
+    list-style-type:none;
 }
 .pros {
-    background: #d4edda;
+    background:rgb(193, 235, 203);
 }
 
 .cons {
-    background: #f8d7da;
+    background:rgb(245, 185, 190);
 }
