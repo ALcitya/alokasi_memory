@@ -1,3 +1,9 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 /* untuk navbar */
 nav, footer{
     margin-top:10px;
@@ -7,7 +13,7 @@ nav, footer{
     border-radius:10px;
 }
 nav{
-    padding:0px 1rem;
+    padding:4px 1rem;
 }
 nav, ul{
     display: flex;
@@ -165,12 +171,15 @@ footer h5{
 }
 
 .algorithm-card {
-    background: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 300px;
     text-align: center;
+    border:1px solid #000000
+}
+.algorithm-card:hover{
+    box-shadow: 10px 14px 4px 2px rgba(0,0,0,0.1);
 }
 
 .algorithm-card h3 {
@@ -179,6 +188,8 @@ footer h5{
 }
 
 .algorithm-card p {
+    font: bold 17px sans-serif;
+    text-weight:900;
     color: #666;
     margin-bottom: 1.5rem;
 }
@@ -195,4 +206,31 @@ footer h5{
 
 .card-button:hover {
     background-color: #0056b3;
+}
+/* deks_First Desk Next  */
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.pros, .cons {
+    padding: 1rem;
+    border-radius: 8px;
+}
+.pros ul, .cons ul{
+    display:flex;
+    flex-direction: column;
+}
+.pros ul li, .cons ul li{
+    text-align: left;
+    color: #000000;
+}
+.pros {
+    background: #d4edda;
+}
+
+.cons {
+    background: #f8d7da;
 }
