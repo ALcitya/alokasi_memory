@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Allocation</title>
-    <link rel="stylesheet" href="../src/styles.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
 </head>
 <body>
     <nav>
-        <img class="profil" src="../src/pak-pandu.jpg" alt="">
+        <img class="profil" src="../src/img/pak-pandu.jpg" alt="">
         <div class="navigasi">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Firsfit.html">First Fit</a></li>
+                <li><a href="Firstfit.html">First Fit</a></li>
                 <li><a href="Nextfit.html">Next Fit</a></li>
             </ul>
         </div>
         <Button class="nav-button">Contact US</Button>
     </nav>
     <div class="container">
-        <h1>Simulasi Alokasi Memory</h1>
+        <h1>Algoritma First Fit</h1>
 
         <div class="input-section">
             <h2>Masukkan Data</h2>
@@ -28,19 +28,16 @@
 
             <label for="process-sizes">Ukuran Prosess (dipisahkan coma) dalam ukuran MB:</label>
             <input type="text" id="process-sizes" placeholder="contoh, 5, 25, 35, 70, 100">
-
-            <button id="simulate-btn">Simulasikan</button>
+            <button id="simulate-first-fit">Simulasikan</button>
         </div>
-
         <div class="output-section">
             <h2>Hasil</h2>
-            <table id="results-table">
+            <table id="results-table-firstFit">
                 <thead>
                     <tr>
                         <th>Process</th>
                         <th>Size</th>
                         <th>First Fit</th>
-                        <th>Next Fit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,7 +47,7 @@
 
     </div>
 
-    <script src="../src/script.js"></script>
+    <script src="../src/js/firstfit.js"></script>
     <footer> 
         <h5>
             &copy; Dibuat oleh kelompok 7 2024

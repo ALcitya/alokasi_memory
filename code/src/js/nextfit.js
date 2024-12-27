@@ -5,22 +5,6 @@ class MemoryBlock {
     }
 }
 
-function firstFit(memoryBlocks, processSizes) {
-    let allocation = Array(processSizes.length).fill(-1);
-
-    processSizes.forEach((processSize, i) => {
-        for (let j = 0; j < memoryBlocks.length; j++) {
-            if (!memoryBlocks[j].isAllocated && memoryBlocks[j].size >= processSize) {
-                allocation[i] = j;
-                memoryBlocks[j].isAllocated = true;
-                break;
-            }
-        }
-    });
-
-    return allocation;
-}
-
 function nextFit(memoryBlocks, processSizes) {
     let allocation = Array(processSizes.length).fill(-1);
     let lastAllocatedIndex = 0;
@@ -43,7 +27,7 @@ function nextFit(memoryBlocks, processSizes) {
     return allocation;
 }
 
-document.getElementById("simulate-btn").addEventListener("click", () => {
+function simulateNextFit() {
     const memoryInput = document.getElementById("memory-blocks").value;
     const processInput = document.getElementById("process-sizes").value;
 
@@ -55,17 +39,11 @@ document.getElementById("simulate-btn").addEventListener("click", () => {
     const memoryBlockSizes = memoryInput.split(",").map(Number);
     const processSizes = processInput.split(",").map(Number);
 
-    // First Fit
-    const memoryBlocksFF = memoryBlockSizes.map(size => new MemoryBlock(size));
-    const allocationFF = firstFit(memoryBlocksFF, processSizes);
+    let memoryBlocks = memoryBlockSizes.map(size => new MemoryBlock(size));
+    let allocation = nextFit(memoryBlocks, processSizes);
 
-    // Next Fit
-    const memoryBlocksNF = memoryBlockSizes.map(size => new MemoryBlock(size));
-    const allocationNF = nextFit(memoryBlocksNF, processSizes);
-
-    
     // Display Results in Table
-    const tableBody = document.querySelector("#results-table tbody");
+    const tableBody = document.querySelector("#results-table-nextFit tbody");
     tableBody.innerHTML = ""; // Clear previous results
 
     processSizes.forEach((processSize, i) => {
@@ -79,19 +57,14 @@ document.getElementById("simulate-btn").addEventListener("click", () => {
         sizeCell.textContent = `${processSize} MB`;
         row.appendChild(sizeCell);
 
-        const firstFitCell = document.createElement("td");
-        firstFitCell.textContent = allocationFF[i] !== -1
-            ? `Hole ${allocationFF[i] + 1}`
+        const fitCell = document.createElement("td");
+        fitCell.textContent = allocation[i] !== -1
+            ? `Hole ${allocation[i] + 1}`
             : "tidak bisa dialokasikan";
-        row.appendChild(firstFitCell);
-
-        const nextFitCell = document.createElement("td");
-        nextFitCell.textContent = allocationNF[i] !== -1
-            ? `Hole ${allocationNF[i] + 1}`
-            : "tidak bisa dialokasikan";
-        row.appendChild(nextFitCell);
+        row.appendChild(fitCell);
 
         tableBody.appendChild(row);
     });
-    
-});
+}
+
+document.getElementById("simulate-next-fit").addEventListener("click", simulateNextFit);
